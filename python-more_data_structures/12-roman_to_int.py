@@ -26,10 +26,13 @@ def roman_to_int(roman_string):
     if len(number) > 1:
         for i in number:
             if number[idx] == 'I' and number[idx + 1] == 'V':
-                number[idx:idx + 2] = [''.join(number[idx:idx + 2])]
+                number[idx:idx + 1] = [''.join(number[idx:idx + 1])]
             elif number[idx] == 'I' and number[idx + 1] == 'X':
-                number[idx:idx + 2] = [''.join(number[idx:idx + 2])]
-            else: continue
+                number[idx:idx + 1] = [''.join(number[idx:idx + 1])]
+            elif number[idx] == 'X' and number[idx + 1] == 'C':
+                number[idx:idx + 1] = [''.join(number[idx:idx + 1])]
+            else: 
+                continue
             idx += 1
 
     for key, value in roman_dict.items():
