@@ -15,18 +15,20 @@ def roman_to_int(roman_string):
         "IX": 9, 
         "X": 10,
         "L": 50,
+        "XC": 90,
         "C": 100, 
         "D": 500, 
         "M": 1000 
     }
     
     idx = 0
-    
+
     for i in number:
         if number[idx] == 'I' and number[idx + 1] == 'V':
             number[idx:idx + 2] = [''.join(number[idx:idx + 2])]
         elif number[idx] == 'I' and number[idx + 1] == 'X':
             number[idx:idx + 2] = [''.join(number[idx:idx + 2])]
+        idx += 1
 
     for key, value in roman_dict.items():
         for i in number:
