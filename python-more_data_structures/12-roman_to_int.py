@@ -31,8 +31,7 @@ def roman_to_int(roman_string):
                 number[idx:idx + 1] = [''.join(number[idx:idx + 1])]
             elif number[idx] == 'X' and number[idx + 1] == 'C':
                 number[idx:idx + 1] = [''.join(number[idx:idx + 1])]
-            else: 
-                continue
+            else: continue
             idx += 1
 
     for key, value in roman_dict.items():
