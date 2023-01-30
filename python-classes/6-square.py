@@ -6,8 +6,8 @@ class Square:
     '''creates a square'''
     def __init__(self, size=0, position=(0, 0)):
         '''initializes a square with side of square'''
-        self._Square__size = size
-        self._Square__position = position
+        self.size = size
+        self.position = position
 
     @property
     def size(self):
