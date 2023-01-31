@@ -25,14 +25,14 @@ Matrix is a list of integer and div is 0:
     >>> matrix_divided(matrix, 0)
     Traceback (most recent call last):
         ...
-    TypeError: division by zero
+    ZeroDivisionError: division by zero
 
 Matrix is not a list of lists of integers and div is an integer:
     >>> matrix = [[1, 2, "School"], ["Best", 5, 6]]
     >>> matrix_divided(matrix, 3)
     Traceback (most recent call last):
         ...
-    TypeError: matrix must be a matrix (list of lists) of integers/floats"
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
 
 Matrix is a list of lists of integers but not rectangular and div is an integer:
     >>> matrix = [[1, 2, 3], [4, 5, 6, 7]]
@@ -43,5 +43,5 @@ Matrix is a list of lists of integers but not rectangular and div is an integer:
 
 Matrix is a list of lists of integers and div is 'inf':
     >>> matrix = [[1, 2, 3], [4, 5, 6]]
-    >>> matrix_divided(matrix, float(inf))
+    >>> matrix_divided(matrix, float('inf'))
     all values == 0.0
