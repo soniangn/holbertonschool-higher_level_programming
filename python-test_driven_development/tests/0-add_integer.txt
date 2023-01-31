@@ -37,13 +37,13 @@ One argument:
     100
 
 a is 'inf':
-    >>> add_integer(float('inf'), 5)
+    >>> add_integer(float('inf'), 2)
     Traceback (most recent call last):
         ... 
-    OverflowError: long int too large to convert to float
+    OverflowError: cannot convert float infinity to integer
 
 a is 'NaN':
-    >>> add_integer(float('NaN'), 5)
+    >>> add_integer(float('NaN'), 2)
     Traceback (most recent call last):
         ... 
     ValueError: cannot convert float NaN to integer
