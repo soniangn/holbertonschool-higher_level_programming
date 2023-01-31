@@ -23,3 +23,9 @@ first_name is a string and last_name is an integer:
     Traceback (most recent call last):
         ...
     TypeError: last_name must be a string
+
+Zero arguments:
+    >>> say_my_name()
+    Traceback (most recent call last):
+        ...
+    TypeError: say_my_name() missing 2 required positional arguments: 'first_name' and 'last_name'
