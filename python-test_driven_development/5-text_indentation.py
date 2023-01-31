@@ -7,7 +7,7 @@ def text_indentation(text):
     each of these characters: ., ? and :"""
     if isinstance(text, str) is False:
         raise TypeError("text must be a string")
-    
+
     for character in text:
         print("{}".format(str(character)), end="")
         if character in ['.', '?', ':']:
