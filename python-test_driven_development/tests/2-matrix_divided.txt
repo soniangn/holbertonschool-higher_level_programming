@@ -44,4 +44,4 @@ Matrix is a list of lists of integers but not rectangular and div is an integer:
 Matrix is a list of lists of integers and div is 'inf':
     >>> matrix = [[1, 2, 3], [4, 5, 6]]
     >>> matrix_divided(matrix, float('inf'))
-    all values == 0.0
+    [[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
