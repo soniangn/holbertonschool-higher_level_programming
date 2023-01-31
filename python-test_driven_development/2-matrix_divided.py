@@ -20,11 +20,11 @@ def matrix_divided(matrix, div):
     for row in matrix:
         for number in row:
             if size != len(row):
-                raise TypeError("Each row of the matrix"\
+                raise TypeError("Each row of the matrix"
                                 " must have the same size")
 
             if type(number) is not int and type(number) is not float:
-                raise TypeError("matrix must be a matrix (list of lists)"\
+                raise TypeError("matrix must be a matrix (list of lists)"
                                 " of integers/floats")
 
     return [[round(number / div, 2) for number in row] for row in matrix]
