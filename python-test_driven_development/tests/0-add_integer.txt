@@ -1,0 +1,33 @@
+This is the "0-add_integer" module
+==================================
+
+Using ``add_integer`` 
+---------------------
+
+Import ``add_integer`` from the ``0-add_integer`` module:
+    
+    >>> add_integer = __import__('0-add_integer').add_integer
+
+a and b are integers:
+    >>> add_integer(1, 2)
+    3
+
+a is an integer and b is a float:
+    >>> add_integer(100.3, -2)
+    98
+
+a is an positive integer and b a negative integer:
+    >>> add_integer(100, -2)
+    98
+
+a is an integer and b a string:
+    >>> add_integer(4, "School")
+    b must be an integer
+
+One argument 'None':
+    >>> add_integer(None) 
+    a must be an integer
+
+One argument:
+    >>> add_integer(2)
+    100
