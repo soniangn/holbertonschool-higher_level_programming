@@ -36,14 +36,14 @@ One argument:
     >>> add_integer(2)
     100
 
-One argument:
-    >>> add_integer(inf)
+a is 'inf':
+    >>> add_integer(inf, 5)
     Traceback (most recent call last):
         ... 
     OverflowError: long int too large to convert to float
 
-One argument:
-    >>> add_integer(NaN)
+a is 'NaN':
+    >>> add_integer(NaN, 5)
     Traceback (most recent call last):
         ... 
     ValueError: cannot convert float NaN to integer
