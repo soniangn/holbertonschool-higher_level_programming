@@ -26,7 +26,7 @@ first_name is a string and last_name is an integer:
 
 One argument:
     >>> say_my_name("White")
-    My name is White
+    My name is White 
 
 Zero argument:
     >>> say_my_name()
