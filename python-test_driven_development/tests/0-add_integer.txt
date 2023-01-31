@@ -37,15 +37,13 @@ One argument:
     100
 
 a is inf:
-    >>> add_integer(float(inf))
+    >>> add_integer('inf')
     Traceback (most recent call last):
         ... 
     OverflowError: long int too large to convert to float
-    NameError: name 'inf' is not defined
 
 a is NaN:
-    >>> add_integer(float(Nan))
+    >>> add_integer(NaN)
     Traceback (most recent call last):
         ... 
     ValueError: cannot convert float NaN to integer
-    NameError: name 'Nan' is not defined
