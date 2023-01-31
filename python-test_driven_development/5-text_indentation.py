@@ -20,4 +20,3 @@ def text_indentation(text):
             after_new_line = True
         else:
             print(c, end="")
-
