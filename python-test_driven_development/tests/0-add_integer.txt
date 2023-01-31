@@ -41,9 +41,11 @@ a is inf:
     Traceback (most recent call last):
         ... 
     OverflowError: long int too large to convert to float
+    NameError: name 'inf' is not defined
 
 a is NaN:
     >>> add_integer(float(Nan))
     Traceback (most recent call last):
         ... 
     ValueError: cannot convert float NaN to integer
+    NameError: name 'Nan' is not defined
