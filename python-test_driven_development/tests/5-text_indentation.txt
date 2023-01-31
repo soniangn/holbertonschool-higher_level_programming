@@ -11,9 +11,9 @@ Import ``text_indentation`` from the ``5-text_indentation`` module:
 text is a string:
     >>> text_indentation("Testing? string. Go on")
     Testing?
-
+    <BLANKLINE>
     string.
-
+    <BLANKLINE>
     Go on
 
 text is not a string:
@@ -26,4 +26,4 @@ No argument:
     >>> text_indentation()
     Traceback (most recent call last):
         ...
-    text_indentation() missing 1 required positional argument: 'text'
+    TypeError: text_indentation() missing 1 required positional argument: 'text'
