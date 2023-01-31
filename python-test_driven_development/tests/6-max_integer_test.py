@@ -9,5 +9,9 @@ class TestMaxInteger(unittest.TestCase):
     def test_no_args(self):
         self.assertEqual(max_integer([]), None)
 
+class TestMaxInteger(unittest.TestCase):
+    def test_max_end(self):
+        self.assertEqual(max_integer([1, 2, 3]), 3)
+
 if __name__ == '__main__':
     unittest.main()
