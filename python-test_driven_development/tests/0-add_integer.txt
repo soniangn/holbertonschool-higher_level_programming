@@ -36,13 +36,13 @@ One argument:
     >>> add_integer(2)
     100
 
-a is inf:
-    >>> add_integer('inf')
+One argument:
+    >>> add_integer(inf)
     Traceback (most recent call last):
         ... 
     OverflowError: long int too large to convert to float
 
-a is NaN:
+One argument:
     >>> add_integer(NaN)
     Traceback (most recent call last):
         ... 
