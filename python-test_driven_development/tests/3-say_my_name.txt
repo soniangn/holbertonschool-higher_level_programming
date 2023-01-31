@@ -25,7 +25,7 @@ first_name is a string and last_name is an integer:
     TypeError: last_name must be a string
 
 One argument:
-    >>> say_my_name("White")
+    >>> say_my_name("", "White")
     Traceback (most recent call last):
         ...
     TypeError: say_my_name() missing 1 required positional argument: 'first_name'
