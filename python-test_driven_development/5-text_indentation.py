@@ -8,7 +8,16 @@ def text_indentation(text):
     if isinstance(text, str) is False:
         raise TypeError("text must be a string")
 
-    for character in text:
-        print("{}".format(str(character)), end="")
-        if character in ['.', '?', ':']:
-            print("\n" * 2, end="")
+    after_new_line = False
+    for c in text:
+        if after_new_line:
+            if c == " ":
+                continue
+            after_new_line = False
+        if c in ['.', '?', ':']:
+            print(c)
+            print("")
+            after_new_line = True
+        else:
+            print(c, end="")
+
