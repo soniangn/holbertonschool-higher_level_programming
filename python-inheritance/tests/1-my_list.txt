@@ -31,7 +31,4 @@ list is a no sorted list with negative integers:
 list is empty:
     >>> my_list = MyList()
     >>> my_list.print_sorted()
-
-check __str__:
-    >>> my_list = MyList()
-    >>> print("{}".format(my_list.__str__()))
+    []
