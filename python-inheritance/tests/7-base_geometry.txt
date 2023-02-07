@@ -12,7 +12,12 @@ Import ``BaseGeometry`` from the ``7-base_geometry`` module:
 
 correct output:
     >>> bg.integer_validator("my_int", 12)
-    
+
+area test:
+    >>> bg.area()
+    Traceback (most recent call last):
+        ...
+    Exception: area() is not implemented
 
 name is not an integer:
     >>> bg.integer_validator("name", "John")
@@ -31,3 +36,45 @@ value is less than 0:
     Traceback (most recent call last):
         ... 
     ValueError: distance must be greater than 0
+
+no argument:
+    >>> bg.integer_validator()
+    Traceback (most recent call last):
+        ... 
+    TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+missing one argument:
+    >>> bg.integer_validator("age")
+    Traceback (most recent call last):
+        ... 
+    TypeError: integer_validator() missing 1 required positional arguments: 'value'
+
+value is a tuple:
+    >>> bg.integer_validator("age", (4,))
+    Traceback (most recent call last):
+        ... 
+    TypeError: name must be an integer
+
+value is a list:
+    >>> bg.integer_validator("age", [3])
+    Traceback (most recent call last):
+        ... 
+    TypeError: name must be an integer
+
+value is a boolean:
+    >>> bg.integer_validator("age", True)
+    Traceback (most recent call last):
+        ... 
+    TypeError: name must be an integer
+
+name is a dictionary:
+    >>> bg.integer_validator("age", {3, 4})
+    Traceback (most recent call last):
+        ... 
+    TypeError: name must be an integer
+
+value is None:
+    >>> bg.integer_validator("age", None)
+    Traceback (most recent call last):
+        ... 
+    TypeError: name must be an integer
