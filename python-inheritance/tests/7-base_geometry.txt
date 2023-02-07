@@ -9,6 +9,7 @@ Import ``BaseGeometry`` from the ``7-base_geometry`` module:
     >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
     >>> bg = BaseGeometry()
+
 correct output:
     >>> bg.integer_validator("my_int", 12)
     
@@ -25,7 +26,7 @@ value is equal to 0:
         ... 
     ValueError: age must be greater than 0
 
-value is lass than 0:
+value is less than 0:
     >>> bg.integer_validator("distance", -4)
     Traceback (most recent call last):
         ... 
