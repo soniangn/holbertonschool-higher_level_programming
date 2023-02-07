@@ -17,6 +17,8 @@ list is a no sorted list with positive integers:
     >>> my_list.append(5)
     >>> my_list.print_sorted()
     [1, 2, 3, 4, 5]
+    >>> print(my_list)
+    [1, 4, 2, 3, 5]
 
 list is a no sorted list with negative integers:
     >>> my_list = MyList()
@@ -27,6 +29,8 @@ list is a no sorted list with negative integers:
     >>> my_list.append(5)
     >>> my_list.print_sorted()
     [-4, -2, 1, 2, 5]
+    >>> print(my_list)
+    [1, -2, 2, -4, 5]
 
 list is empty:
     >>> my_list = MyList()
