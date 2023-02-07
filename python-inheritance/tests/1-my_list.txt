@@ -8,7 +8,7 @@ Import ``my_list`` from the ``1-my_list`` module:
     
     >>> MyList = __import__('1-my_list').MyList
 
-list is a list of integers:
+list is a no sorted list with positive integers:
     >>> my_list = MyList()
     >>> my_list.append(1)
     >>> my_list.append(4)
@@ -18,3 +18,21 @@ list is a list of integers:
     >>> my_list.print_sorted()
     [1, 2, 3, 4, 5]
 
+list is a no sorted list with negative integers:
+    >>> my_list = MyList()
+    >>> my_list.append(1)
+    >>> my_list.append(-2)
+    >>> my_list.append(2)
+    >>> my_list.append(-4)
+    >>> my_list.append(5)
+    >>> my_list.print_sorted()
+    [-4, -2, 1, 2, 5]
+
+list is empty:
+    >>> my_list = MyList()
+    >>> my_list.print_sorted()
+    []
+
+check __str__:
+    >>> my_list = MyList()
+    >>> print("{}".format(my_list.__str__()))
