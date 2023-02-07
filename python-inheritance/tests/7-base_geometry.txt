@@ -8,17 +8,19 @@ Import ``BaseGeometry`` from the ``7-base_geometry`` module:
     
     >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
-name is not an integer:
+correct output:
     >>> bg = BaseGeometry()
+    >>> bg.integer_validator("my_int", 12)
+    
+
+name is not an integer:
     >>> bg.integer_validator("name", "John")
     [TypeError] name must be an integer
 
 value is equal to 0:
-    >>> bg = BaseGeometry()
     >>> bg.integer_validator("age", 0)
     [ValueError] age must be greater than 0
 
 value is lass than 0:
-    >>> bg = BaseGeometry()
     >>> bg.integer_validator("distance", -4)
     [ValueError] distance must be greater than 0
