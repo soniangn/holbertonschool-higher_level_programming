@@ -4,21 +4,24 @@
 
 import json
 import sys
+import os.path
 save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
 load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
 
-try:
-    arg_list = []
 
-    obj_list = load_from_json_file('add_item.json')
+filename = 'add_item.json'
 
-    for arg in sys.argv[1:]:
-        arg_list.append(arg)
+check_file = os.path.isfile(filename)
+print(check_file)
 
-    save_to_json_file(arg_list, 'add_item.json')
+if check_file:
+    pass
+else:
+    save_to_json_file([], filename)
 
-except: 
-    for arg in sys.argv[1:]:
-            arg_list.append(arg)
+new_file = load_from_json_file(filename)
 
-    save_to_json_file(arg_list, 'add_item.json')
+for arg in sys.argv[1:]:
+    new_file.append(arg)
+
+save_to_json_file(new_file, filename)
