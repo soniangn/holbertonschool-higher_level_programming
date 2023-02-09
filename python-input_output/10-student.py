@@ -16,4 +16,5 @@ class Student:
         for attr in attrs:
             if type(attr) is not str:
                 return self.__dict__
-        return {attr: self.__dict__[attr] for attr in self.__dict__ if attr in attrs}
+        return {attr: self.__dict__[attr] for attr \
+                in self.__dict__ if attr in attrs}
