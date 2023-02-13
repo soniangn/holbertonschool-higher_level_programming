@@ -76,7 +76,8 @@ class Rectangle(Base):
     def display(self):
         """prints in stoud the rectangle instance with """
         """ character # """
-        print("\n" * self.__y)
+        if self.__y:
+            print("\n" * self.__y)
 
         for character in range(self.__height):
             print(" " * self.__x, end="")
