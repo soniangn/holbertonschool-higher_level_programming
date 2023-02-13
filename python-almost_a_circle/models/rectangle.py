@@ -67,9 +67,9 @@ class Rectangle(Base):
 
     @x.setter
     def x(self, value):
-        """sets x"""
+        """validates and sets x"""
         if isinstance(x, int):
-            if x < 0:
+            if value < 0:
                 raise ValueError('x must be >= 0')
         else:
             raise TypeError("x must be an integer")
@@ -82,9 +82,9 @@ class Rectangle(Base):
 
     @y.setter
     def y(self, value):
-        """sets y"""
+        """validates and sets y"""
         if isinstance(y, int):
-            if y < 0:
+            if value < 0:
                 raise ValueError('y must be >= 0')
         else:
             raise TypeError("y must be an integer")
