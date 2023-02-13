@@ -4,9 +4,9 @@ import json
 
 
 class Base:
-    """ 
-    represents base class for all others models 
-    
+    """
+    represents base class for all others models
+
     __nb_objects: number of instantiated base
 
     """
@@ -46,6 +46,6 @@ class Base:
     def from_json_string(json_string):
         """ returns list of json string representation """
         if json_string is None:
-            return("[]")
+            return []
         else:
             return json.loads(json_string)
