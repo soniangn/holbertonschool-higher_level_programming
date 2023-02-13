@@ -23,11 +23,11 @@ class Rectangle(Base):
             raise ValueError("height must be > 0")
         if isinstance(x, int) is False:
             raise TypeError("x must be an integer")
-        if x < 0:
+        if x <= 0:
             raise ValueError("x must be >= 0")
         if isinstance(y, int) is False:
             raise TypeError("y must be an integer")
-        if y < 0:
+        if y <= 0:
             raise ValueError("y must be >= 0")
 
     @property
