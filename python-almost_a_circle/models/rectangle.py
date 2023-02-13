@@ -77,7 +77,7 @@ class Rectangle(Base):
         """prints in stoud the rectangle instance with """
         """ character # """
         if self.__y:
-            print("\n" * self.__y)
+            print("\n" * self.__y, end="")
 
         for character in range(self.__height):
             print(" " * self.__x, end="")
