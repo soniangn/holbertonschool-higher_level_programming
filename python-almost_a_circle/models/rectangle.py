@@ -68,10 +68,11 @@ class Rectangle(Base):
     @x.setter
     def x(self, value):
         """sets x"""
-        if not isinstance(value, int):
+         if isinstance(x, int):
+            if x < 0:
+                raise ValueError('x must be >= 0')
+        else:
             raise TypeError("x must be an integer")
-        if value <= 0:
-            raise ValueError("x must be >= 0")
         self.__x = value
 
     @property
@@ -82,10 +83,11 @@ class Rectangle(Base):
     @y.setter
     def y(self, value):
         """sets y"""
-        if not isinstance(value, int):
+        if isinstance(y, int):
+            if y < 0:
+                raise ValueError('y must be >= 0')
+        else:
             raise TypeError("y must be an integer")
-        if value <= 0:
-            raise ValueError("y must be >= 0")
         self.__y = value
 
     def area(self):
