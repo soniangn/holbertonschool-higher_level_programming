@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """module for Rectangle class"""
-from models.base import Base
+from base import Base
 
 
 class Rectangle(Base):
@@ -90,7 +90,7 @@ class Rectangle(Base):
                                                        self.__width,
                                                        self.__height)
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """ updates the rectangle """
         length = len(args)
         if length > 0:
@@ -102,3 +102,6 @@ class Rectangle(Base):
                 self.__y = args[4]
             except IndexError:
                 pass
+        else:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
