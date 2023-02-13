@@ -68,7 +68,7 @@ class Rectangle(Base):
     @x.setter
     def x(self, value):
         """sets x"""
-         if isinstance(x, int):
+        if isinstance(x, int):
             if x < 0:
                 raise ValueError('x must be >= 0')
         else:
