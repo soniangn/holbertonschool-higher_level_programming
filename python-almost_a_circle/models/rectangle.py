@@ -2,6 +2,7 @@
 """module for Rectangle class"""
 from models.base import Base
 
+
 class Rectangle(Base):
     """class for creating a rectangle"""
     def __init__(self, width, height, x=0, y=0, id=None):
@@ -11,12 +12,12 @@ class Rectangle(Base):
         self.__height = height
         self.__x = x
         self.__y = y
-    
+
     @property
     def width(self):
         """gets the width"""
         return self.__width
-    
+
     @width.setter
     def width(self, value):
         """sets the width"""
@@ -26,7 +27,7 @@ class Rectangle(Base):
     def height(self):
         """gets the height"""
         return self.__height
-    
+
     @height.setter
     def height(self, value):
         """sets the height"""
@@ -36,7 +37,7 @@ class Rectangle(Base):
     def x(self):
         """gets x"""
         return self.__x
-    
+
     @x.setter
     def x(self, value):
         """sets x"""
@@ -46,7 +47,7 @@ class Rectangle(Base):
     def y(self):
         """gets y"""
         return self.__y
-    
+
     @y.setter
     def y(self, value):
         """sets y"""
