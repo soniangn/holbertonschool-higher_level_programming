@@ -54,5 +54,6 @@ class Base:
     def create(cls, **dictionary):
         """ returns an instance with all attributes already set """
         dummy = cls(5, 3)
+        dummy.x = 0
         dummy.update(**dictionary)
         return dummy
