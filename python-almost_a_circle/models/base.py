@@ -68,6 +68,14 @@ class Base:
         """ returns a list of instances """
         filename = "{}.json".format(cls.__name__)
 
+        new_list = []
         check_file = os.path.isfile(filename)
         if not check_file:
             return []
+        else:
+            with open(filename, "r", encoding="utf-8") as f:
+                read_data = f.read()
+                json_list = cls.from_json_string(read_data)  
+                for dict in json_list:
+                    new_list.append(cls.create(**dict))
+                return new_list
