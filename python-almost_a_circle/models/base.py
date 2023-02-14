@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """ module for Base class """
 import json
-
+import os.path
 
 class Base:
     """
@@ -25,22 +25,26 @@ class Base:
     def to_json_string(list_dictionaries):
         """ returns the JSON string representation of list_dictionaries """
         if list_dictionaries is None:
-            return "[]"
+            return []
         else:
             return json.dumps(list_dictionaries)
 
     @classmethod
     def save_to_file(cls, list_objs):
+        """ writes the JSON string representation of list_objs to a file """
         filename = "{}.json".format(cls.__name__)
 
-        print(list_objs)
+        json_dict = []
 
         with open(filename, "w", encoding="utf-8") as f:
             if list_objs is None:
                 f.write("[]")
             else:
-                json_obj = cls.to_json_string(list_objs)
-                f.write(json_obj)
+                for obj in list_objs:
+                    dictionary = cls.to_dictionary(obj)
+                    json_dict.append(dictionary)
+                    dict_to_string = cls.to_json_string(json_dict)
+                f.write(dict_to_string)
 
     @staticmethod
     def from_json_string(json_string):
@@ -57,3 +61,12 @@ class Base:
         dummy.x = 0
         dummy.update(**dictionary)
         return dummy
+
+    @classmethod
+    def load_from_file(cls):
+        """ returns a list of instances """
+        filename = "{}.json".format(cls.__name__)
+
+        check_file = os.path.isfile(filename)
+        if not check_file:
+            return []
