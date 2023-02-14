@@ -18,6 +18,34 @@ class TestRectangle(unittest.TestCase):
         obj = Rectangle(1, 2, 3, 4)
         self.assertEqual(obj.id, 3)
     
+    def test_rectangle_4(self):
+        obj = Rectangle(1, 2, 3, 4, 5)
+        self.assertEqual(obj.id, 5)
+    
+    def test_rectangle_errors(self):
+        with self.assertRaises(TypeError):
+            Rectangle("1", 2)
+        with self.assertRaises(TypeError):
+            Rectangle(1, "2")
+        with self.assertRaises(TypeError):
+            Rectangle(1, 2, "3")
+        with self.assertRaises(TypeError):
+            Rectangle(1, 2, 3, "4")
+        with self.assertRaises(ValueError):
+            Rectangle(-1, 2)
+        with self.assertRaises(ValueError):
+            Rectangle(1, -2)
+        with self.assertRaises(ValueError):
+            Rectangle(0, 2)
+        with self.assertRaises(ValueError):
+            Rectangle(1, 0)
+        with self.assertRaises(ValueError):
+            Rectangle(1, 2, -3)
+        with self.assertRaises(ValueError):
+            Rectangle(1, 2, 3, -4)
+
+
+
 
 if __name__ == '__main__':
     unittest.main()
