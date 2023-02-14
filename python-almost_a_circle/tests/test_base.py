@@ -10,7 +10,7 @@ class TestBase(unittest.TestCase):
         obj = Base()
         self.assertEqual(obj.id, 1)
     
-    def test_next(self):
+    def test_no_args_bis(self):
         obj = Base()
         self.assertEqual(obj.id, 2)
 
@@ -20,9 +20,9 @@ class TestBase(unittest.TestCase):
 
     def test_to_json_none(self):
         obj = Base.to_json_string(None)
-        self.assertEqual(obj, '[]')
+        self.assertEqual(obj, [])
 
-    def test_to_json_empty(self):
+    def test_to_json_empty_list(self):
         obj = Base.to_json_string([])
         self.assertEqual(obj, '[]')
 
