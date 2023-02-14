@@ -75,7 +75,7 @@ class Base:
         else:
             with open(filename, "r", encoding="utf-8") as f:
                 read_data = f.read()
-                json_list = cls.from_json_string(read_data)  
+                json_list = cls.from_json_string(read_data)
                 for dict in json_list:
                     new_list.append(cls.create(**dict))
                 return new_list
