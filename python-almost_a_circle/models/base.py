@@ -3,6 +3,7 @@
 import json
 import os.path
 
+
 class Base:
     """
     represents base class for all others models
@@ -37,7 +38,7 @@ class Base:
         json_dict = []
 
         with open(filename, "w", encoding="utf-8") as f:
-            if list_objs is None:
+            if list_objs is None or list_objs == []:
                 f.write("[]")
             else:
                 for obj in list_objs:
