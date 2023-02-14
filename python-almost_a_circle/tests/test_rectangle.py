@@ -44,6 +44,21 @@ class TestRectangle(unittest.TestCase):
         with self.assertRaises(ValueError):
             Rectangle(1, 2, 3, -4)
 
+    def test_rectangle_area(self):   
+        obj = Rectangle(2, 3)
+        self.assertEqual(obj.area(), 6)
+    
+    def test_rectangle_str_(self):   
+        obj = Rectangle(2, 3)
+        self.assertEqual(obj.__str__(), "[Rectangle] (16) 0/0 - 2/3")
+    
+    def test_rectangle_display(self):
+        obj = Rectangle(3, 2, 0, 0)
+        self.assertEqual(obj.display(), None)
+
+    def test_11(self):
+        obj = Rectangle(3, 2, 1, 2, 15)
+        self.assertEqual(obj.to_dictionary(), {'id': 15, 'width': 3, 'height': 2, 'x': 1, 'y': 2})
 
 
 
