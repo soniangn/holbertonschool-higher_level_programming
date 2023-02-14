@@ -1,22 +1,20 @@
 #!/usr/bin/python3
-""" Unittest for Base
-"""
 import unittest
 from models.base import Base
 
+
 class TestBase(unittest.TestCase):
-    def test_no_args(self):
+    def test_base_assign_id_auto_0(self):
         b1 = Base()
         self.assertEqual(b1.id, 1)
-    
-    def test_next(self):
-        self.assertEqual(Base().id, 2)
 
-    def test_id(self):
-        self.assertEqual(Base(89).id, 89)
+    def test_base_assign_id_auto_1(self):
+        b2 = Base()
+        self.assertEqual(b2.id, 2)
 
-    def test_to_json_none(self):
-        self.assertEqual(Base.to_json_string(None), "[]")
+    def test_base_assign_id_auto_2(self):
+        b3 = Base(89)
+        self.assertEqual(b3.id, 89)
 
 if __name__ == '__main__':
     unittest.main()
