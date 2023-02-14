@@ -6,7 +6,8 @@ from models.base import Base
 
 class TestBase(unittest.TestCase):
     def test_no_args(self):
-        self.assertEqual(Base().id, 1)
+        b1 = Base()
+        self.assertEqual(b1.id, 1)
     
     def test_next(self):
         self.assertEqual(Base().id, 2)
