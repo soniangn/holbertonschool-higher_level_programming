@@ -1,4 +1,3 @@
-#!/usr/bin/python3
 """ Unittest for Rectangle
 """
 import unittest
@@ -59,8 +58,6 @@ class TestRectangle(unittest.TestCase):
     def test_11(self):
         obj = Rectangle(3, 2, 1, 2, 15)
         self.assertEqual(obj.to_dictionary(), {'id': 15, 'width': 3, 'height': 2, 'x': 1, 'y': 2})
-
-
 
 if __name__ == '__main__':
     unittest.main()
