@@ -38,7 +38,5 @@ class TestBase(unittest.TestCase):
         obj = Base.from_json_string('[{ "id": 89 }]')
         self.assertEqual(obj, [{'id': 89}])
 
-
-
 if __name__ == '__main__':
     unittest.main()
