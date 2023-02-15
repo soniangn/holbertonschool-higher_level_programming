@@ -180,5 +180,6 @@ class TestRectangle(unittest.TestCase):
         Rectangle.save_to_file(list_rectangles_input)
         list_rectangles_output = Rectangle.load_from_file()
 
+
 if __name__ == '__main__':
     unittest.main()
