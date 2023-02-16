@@ -18,6 +18,11 @@ class TestRectangle(unittest.TestCase):
     def test_rectangle_3(self):
         obj = Rectangle(1, 2, 3, 4)
         self.assertEqual(obj.id, 3)
+    
+    def test_rectangle_4(self):
+        obj = Rectangle(1, 2, 3, 4, 5)
+        self.assertEqual(obj.id, 5)
+
 
     def test_rectangle_errors(self):
         with self.assertRaises(TypeError):
@@ -50,7 +55,11 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(obj.__str__(), "[Rectangle] (5) 3/4 - 1/2")
 
     def test_rectangle_display(self):
-        obj = Rectangle(3, 2, 0, 0)
+        obj = Rectangle(3, 2)
+        self.assertEqual(obj.display(), None)
+
+    def test_rectangle_display(self):
+        obj = Rectangle(3, 2, 3, 0)
         self.assertEqual(obj.display(), None)
     
     def test_rectangle_to_dictionary(self):
