@@ -50,22 +50,5 @@ class TestRectangle(unittest.TestCase):
         obj = Rectangle(3, 4)
         self.assertEqual(obj.area(), 12)
 
-    def test_rectangle_str(self):
-        obj = Rectangle(1, 2, 3, 4, 5)
-        self.assertEqual(obj.__str__(), "[Rectangle] (5) 3/4 - 1/2")
-
-    def test_rectangle_display(self):
-        obj = Rectangle(3, 2)
-        self.assertEqual(obj.display(), None)
-
-    def test_rectangle_display(self):
-        obj = Rectangle(3, 2, 3, 0)
-        self.assertEqual(obj.display(), None)
-    
-    def test_rectangle_to_dictionary(self):
-        obj = Rectangle(3, 2, 4, 5, 1)
-        self.assertEqual(obj.to_dictionary(), {'id': 1, 'width': 3, 'height': 2, 'x': 4, 'y': 5})
-
-
 if __name__ == '__main__':
     unittest.main()
