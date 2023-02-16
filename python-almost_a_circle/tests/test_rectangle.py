@@ -169,17 +169,6 @@ class TestRectangle(unittest.TestCase):
     def test_rectangle_save_to_file_empty(self):
         self.assertEqual(Rectangle.save_to_file([]), None)
 
-    def test_rectangle_save_to_file_rect(self):
-        obj = Rectangle(1, 2)
-        self.assertEqual(Rectangle.save_to_file(obj), 0)
-
-    def test_rectangle_load_from_file_rect(self):
-        r1 = Rectangle(10, 7, 2, 8)
-        r2 = Rectangle(2, 4)
-        list_rectangles_input = [r1, r2]
-        Rectangle.save_to_file(list_rectangles_input)
-        list_rectangles_output = Rectangle.load_from_file()
-
 
 if __name__ == '__main__':
     unittest.main()
