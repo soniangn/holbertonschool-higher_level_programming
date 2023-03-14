@@ -1,9 +1,4 @@
 #!/usr/bin/python3
-""" lists all states from the database hbtn_0e_0_usa """
-from sys import argv
-import MySQLdb as DB
-
-
 """ lists all states from the database hbtn_0e_0_usa
 
 Arguments:
@@ -11,6 +6,10 @@ Arguments:
     argv[2]: mysql password
     argv[3]: database name
 """
+from sys import argv
+import MySQLdb as DB
+
+
 db_connect = DB.connect(
     host="localhost",
     port=3306,
