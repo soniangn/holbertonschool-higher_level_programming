@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" takes in an argument and displays all values in the states 
+""" takes in an argument and displays all values in the states
 table of hbtn_0e_0_usa where name matches the argument.
 
 Arguments:
@@ -24,7 +24,8 @@ if __name__ == "__main__":
 
     db_cursor = db_connect.cursor()
 
-    query = "SELECT * FROM states WHERE name LIKE '{}' ORDER BY states.id".format(argv[4])
+    query = "SELECT * FROM states WHERE name LIKE BINARY '{}' \
+             ORDER BY states.id".format(argv[4])
     db_cursor.execute(query)
     rows_selected = db_cursor.fetchall()
 
