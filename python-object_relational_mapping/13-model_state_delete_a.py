@@ -23,7 +23,9 @@ if __name__ == "__main__":
     session = Session()
     Session.configure(bind=engine)
 
-    session.query(State).filter(State.name.contains('a')).all().delete()
+    user_query = session.query(State).filter(State.name.contains('a')).all()
+    for state in user_query:
+        state.delete()
     session.commit()
 
     session.close()
