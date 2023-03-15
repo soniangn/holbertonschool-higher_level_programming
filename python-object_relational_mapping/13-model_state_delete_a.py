@@ -22,7 +22,7 @@ if __name__ == "__main__":
     session = Session()
     Session.configure(bind=engine)
 
-    session.query(State).filter(State.name.contains('a')).delete().all()
+    session.query(State).filter(State.name.contains('a'))..all().delete()
     session.commit()
 
     session.close()
