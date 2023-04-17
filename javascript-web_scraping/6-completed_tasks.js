@@ -10,15 +10,15 @@ request(url, (error, response, body) => {
   } else {
     const jsonBody = JSON.parse(body);
     const counter = {};
-    for (const user of jsonBody) {
+    jsonBody.forEach(user => {
       if (user.completed) {
         if (counter[user.userId] === undefined) {
-          counter[user.userId] = 0;
+          counter[user.userId] = 1;
         } else {
           counter[user.userId]++;
         }
       }
-    }
+    })
     console.log(counter);
-  }
+    }
 });
