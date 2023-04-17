@@ -18,7 +18,7 @@ request(url, (error, response, body) => {
           counter[user.userId]++;
         }
       }
-    })
+    });
     console.log(counter);
-    }
+  }
 });
